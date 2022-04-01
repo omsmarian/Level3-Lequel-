@@ -22,8 +22,13 @@ file(COPY ${CMAKE_SOURCE_DIR}/resources DESTINATION ${CMAKE_BINARY_DIR}/${CMAKE_
 
 # Raylib
 find_package(raylib CONFIG REQUIRED)
-target_include_directories(main PRIVATE ${raylib_INCLUDE_DIRS})
-target_link_libraries(main PRIVATE ${raylib_LIBRARIES})
+if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+    target_include_directories(main PRIVATE ${RAYLIB_INCLUDE_DIRS})
+    target_link_libraries(main PRIVATE ${RAYLIB_LIBRARIES})
+elseif (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+    target_include_directories(main PRIVATE ${raylib_INCLUDE_DIRS})
+    target_link_libraries(main PRIVATE ${raylib_LIBRARIES})
+endif()
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     # From "Working with CMake" documentation:
     target_link_libraries(main PRIVATE "-framework IOKit" "-framework Cocoa" "-framework OpenGL")

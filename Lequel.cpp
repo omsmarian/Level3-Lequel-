@@ -28,16 +28,19 @@ using namespace std;
 TrigramProfile buildTrigramProfile(const Text &text)
 {
     wstring_convert<std::codecvt_utf8_utf16<wchar_t> > converter;
+    TrigramProfile m;
+    for (auto i : text)
+    {
+        wstring unicodeString = converter.from_bytes(i);                    // Tip: converts UTF-8 string to wstring
+        for (size_t j = 0; j < unicodeString.size() - 2; j++)
+        {
+            wstring unicodeTrigram = unicodeString.substr(j,3);
+            string trigram = converter.to_bytes(unicodeTrigram);            // Tip: convert wstring to UTF-8 string
+            m[trigram];
+        }
+    }
 
-    // Your code goes here...
-
-    // Tip: converts UTF-8 string to wstring
-    // wstring unicodeString = converter.from_bytes(textLine);
-
-    // Tip: convert wstring to UTF-8 string
-    // string trigram = converter.to_bytes(unicodeTrigram);
-
-    return TrigramProfile(); // Replace...
+    return m;
 }
 
 /*
