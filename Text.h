@@ -14,6 +14,7 @@
 typedef std::list<std::string> Text;
 
 // Functions
+
 bool getText(const std::string &s, Text &text);
 bool getTextFromFile(const std::string path, Text &text);
 
