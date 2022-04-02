@@ -32,15 +32,22 @@ TrigramProfile buildTrigramProfile(const Text& text)
 	for (auto i : text)
 	{
 		wstring unicodeString = converter.from_bytes(i);                    // converts UTF-8 string to wstring
-		for (size_t j = 0; j < unicodeString.size() - 2; j++)
+		if (unicodeString.size() > 2)
 		{
-			wstring unicodeTrigram = unicodeString.substr(j, 3);
-			string trigram = converter.to_bytes(unicodeTrigram);            // convert wstring to UTF-8 string
-			auto compare = m.find(trigram);
-			if (compare != m.end())
-				m[trigram] += 1;
-			else
-				m[trigram] = 1;
+			for (size_t j = 0; j < unicodeString.size() - 2 && unicodeString.size() > 2; j++)
+			{
+				wstring unicodeTrigram = unicodeString.substr(j, 3);
+				string trigram = converter.to_bytes(unicodeTrigram);            // convert wstring to UTF-8 string
+				
+				for(auto &i: trigram)
+					i = tolower(i);
+				
+				auto compare = m.find(trigram);
+				if (compare != m.end())
+					m[trigram] += 1;
+				else
+					m[trigram] = 1;
+			}
 		}
 	}
 
@@ -61,8 +68,6 @@ void normalizeTrigramProfile(TrigramProfile& trigramProfile)
 	x = sqrt(x);
 	for (auto& element : trigramProfile)
 		element.second = element.second / x;
-
-	return;
 }
 
 /*
@@ -78,13 +83,14 @@ void normalizeTrigramProfile(TrigramProfile& trigramProfile)
 float getCosineSimilarity(TrigramProfile& textProfile, TrigramProfile& languageProfile)
 {
 	float sum = 0;
+	for (auto& trigrams : languageProfile)
+	{
+		for (char letra : trigrams.first)			//no anda hacer mañana
+			letra = tolower(letra);
+	}
 	for (auto& elements : textProfile)
 	{
-		auto x = languageProfile.find(elements.first);
-		if (x != languageProfile.end())
-		{
 			sum += (elements.second * languageProfile[elements.first]);
-		}
 	}
 	return sum;
 }
