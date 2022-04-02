@@ -79,7 +79,7 @@ bool loadLanguagesData(map<string, string> &languageCodeNames, Languages &langua
 
 int main(int, char *[])
 {
-    map<string, string> languageCodeNames;
+    map<string, string> languageCodeNames;          // Agregar los archivos y ya anda
     Languages languages;
 
     if (!loadLanguagesData(languageCodeNames, languages))
