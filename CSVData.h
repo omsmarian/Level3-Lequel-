@@ -13,7 +13,7 @@
 
 typedef std::list<std::vector<std::string>> CSVData;
 
-bool readCSV(const std::string path, CSVData& data);
-bool writeCSV(const std::string path, CSVData& data);
+bool readCSV(const std::string path, CSVData &data);
+bool writeCSV(const std::string path, CSVData &data);
 
 #endif
