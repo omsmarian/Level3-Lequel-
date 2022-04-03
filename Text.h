@@ -10,12 +10,12 @@
 #include <list>
 #include <string>
 
-// Data type: list of text lines
+ // Data type: list of text lines
 typedef std::list<std::string> Text;
 
 // Functions
 
-bool getText(const std::string &s, Text &text);
-bool getTextFromFile(const std::string path, Text &text);
+bool getText(const std::string& s, Text& text);
+bool getTextFromFile(const std::string path, Text& text);
 
 #endif

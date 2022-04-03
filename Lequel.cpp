@@ -38,7 +38,7 @@ TrigramProfile buildTrigramProfile(const Text& text)
 			{
 				wstring unicodeTrigram = unicodeString.substr(j, 3);
 				string trigram = converter.to_bytes(unicodeTrigram);            // convert wstring to UTF-8 string
-				
+
 				auto compare = m.find(trigram);
 				if (compare != m.end())
 					m[trigram] += 1;
@@ -82,7 +82,7 @@ float getCosineSimilarity(TrigramProfile& textProfile, TrigramProfile& languageP
 	float sum = 0;
 	for (auto& elements : textProfile)
 	{
-			sum += (elements.second * languageProfile[elements.first]);
+		sum += (elements.second * languageProfile[elements.first]);
 	}
 	return sum;
 }

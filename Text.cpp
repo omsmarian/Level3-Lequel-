@@ -19,22 +19,22 @@ using namespace std;
  *
  * Returns: success.
  */
-bool getText(const string &s, Text &text)
+bool getText(const string& s, Text& text)
 {
-    text.clear();
+	text.clear();
 
-    string::size_type pos = 0;
-    string::size_type prev = 0;
-    while ((pos = s.find('\n', prev)) != string::npos)
-    {
-        text.push_back(s.substr(prev, pos - prev));
-        prev = pos + 1;
-    }
+	string::size_type pos = 0;
+	string::size_type prev = 0;
+	while ((pos = s.find('\n', prev)) != string::npos)
+	{
+		text.push_back(s.substr(prev, pos - prev));
+		prev = pos + 1;
+	}
 
-    // To get the last substring (or only, if delimiter is not found)
-    text.push_back(s.substr(prev));
+	// To get the last substring (or only, if delimiter is not found)
+	text.push_back(s.substr(prev));
 
-    return true;
+	return true;
 }
 
 /*
@@ -46,20 +46,20 @@ bool getText(const string &s, Text &text)
  *
  * Returns: success.
  */
-bool getTextFromFile(const string path, Text &text)
+bool getTextFromFile(const string path, Text& text)
 {
-    ifstream file(path);
+	ifstream file(path);
 
-    if (file.is_open())
-    {
-        file.seekg(0, ios::end);
-        int fileSize = file.tellg() > 1000000 ? 1000000 : (int)file.tellg();
-        string fileData(fileSize, ' ');
-        file.seekg(0);
-        file.read(&fileData[0], fileSize);
+	if (file.is_open())
+	{
+		file.seekg(0, ios::end);
+		int fileSize = file.tellg() > 1000000 ? 1000000 : (int)file.tellg();
+		string fileData(fileSize, ' ');
+		file.seekg(0);
+		file.read(&fileData[0], fileSize);
 
-        return !file.fail() && getText(fileData, text);
-    }
+		return !file.fail() && getText(fileData, text);
+	}
 
-    return false;
+	return false;
 }
