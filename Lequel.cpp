@@ -34,7 +34,7 @@ TrigramProfile buildTrigramProfile(const Text& text)
 		wstring unicodeString = converter.from_bytes(i);                    // converts UTF-8 string to wstring
 		if (unicodeString.size() > 2)
 		{
-			for (size_t j = 0; j < unicodeString.size() - 2 && unicodeString.size() > 2; j++)
+			for (size_t j = 0; j < unicodeString.size() - 2; j++)
 			{
 				wstring unicodeTrigram = unicodeString.substr(j, 3);
 				string trigram = converter.to_bytes(unicodeTrigram);            // convert wstring to UTF-8 string
