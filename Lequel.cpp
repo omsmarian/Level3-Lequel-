@@ -39,11 +39,7 @@ TrigramProfile buildTrigramProfile(const Text& text)
 				wstring unicodeTrigram = unicodeString.substr(j, 3);
 				string trigram = converter.to_bytes(unicodeTrigram);            // convert wstring to UTF-8 string
 
-				auto compare = m.find(trigram);
-				if (compare != m.end())
-					m[trigram] += 1;
-				else
-					m[trigram] = 1;
+				m[trigram] += 1;
 			}
 		}
 	}
