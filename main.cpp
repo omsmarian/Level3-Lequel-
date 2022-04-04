@@ -30,6 +30,7 @@ const string TRIGRAMS_PATH = "resources/trigrams/";
  *
  * Returns: whether the function succeeded.
  */
+
 bool loadLanguagesData(map<string, string>& languageCodeNames, Languages& languages)
 {
 	// Reads available language codes
