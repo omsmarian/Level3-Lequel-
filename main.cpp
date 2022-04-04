@@ -14,6 +14,7 @@
 
 #include "CSVData.h"
 #include "Lequel.h"
+#include "Language.h"
 
 using namespace std;
 
@@ -81,6 +82,8 @@ int main(int, char* [])
 {
 	map<string, string> languageCodeNames;
 	Languages languages;
+	
+	buildLanguageProfile("cat", "Catalan");
 
 	if (!loadLanguagesData(languageCodeNames, languages))
 	{

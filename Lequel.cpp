@@ -25,6 +25,7 @@ using namespace std;
  *
  * Returns: the trigram profile.
  */
+
 TrigramProfile buildTrigramProfile(const Text& text)
 {
 	wstring_convert<std::codecvt_utf8_utf16<wchar_t> > converter;

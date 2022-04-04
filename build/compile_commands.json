@@ -1,0 +1,52 @@
+[
+{
+  "directory": "/Users/lucia/EDA/Level3/build",
+  "command": "/usr/bin/clang++  -I/usr/local/Cellar/raylib/4.0.0/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fsanitize=address -std=gnu++11 -o CMakeFiles/main.dir/main.cpp.o -c /Users/lucia/EDA/Level3/main.cpp",
+  "file": "/Users/lucia/EDA/Level3/main.cpp"
+},
+{
+  "directory": "/Users/lucia/EDA/Level3/build",
+  "command": "/usr/bin/clang++  -I/usr/local/Cellar/raylib/4.0.0/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fsanitize=address -std=gnu++11 -o CMakeFiles/main.dir/CSVData.cpp.o -c /Users/lucia/EDA/Level3/CSVData.cpp",
+  "file": "/Users/lucia/EDA/Level3/CSVData.cpp"
+},
+{
+  "directory": "/Users/lucia/EDA/Level3/build",
+  "command": "/usr/bin/clang++  -I/usr/local/Cellar/raylib/4.0.0/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fsanitize=address -std=gnu++11 -o CMakeFiles/main.dir/Text.cpp.o -c /Users/lucia/EDA/Level3/Text.cpp",
+  "file": "/Users/lucia/EDA/Level3/Text.cpp"
+},
+{
+  "directory": "/Users/lucia/EDA/Level3/build",
+  "command": "/usr/bin/clang++  -I/usr/local/Cellar/raylib/4.0.0/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fsanitize=address -std=gnu++11 -o CMakeFiles/main.dir/Lequel.cpp.o -c /Users/lucia/EDA/Level3/Lequel.cpp",
+  "file": "/Users/lucia/EDA/Level3/Lequel.cpp"
+},
+{
+  "directory": "/Users/lucia/EDA/Level3/build",
+  "command": "/usr/bin/clang++  -I/usr/local/Cellar/raylib/4.0.0/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fsanitize=address -std=gnu++11 -o CMakeFiles/main.dir/Language.cpp.o -c /Users/lucia/EDA/Level3/Language.cpp",
+  "file": "/Users/lucia/EDA/Level3/Language.cpp"
+},
+{
+  "directory": "/Users/lucia/EDA/Level3/build",
+  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fsanitize=address -std=gnu++11 -o CMakeFiles/main_test.dir/main_test.cpp.o -c /Users/lucia/EDA/Level3/main_test.cpp",
+  "file": "/Users/lucia/EDA/Level3/main_test.cpp"
+},
+{
+  "directory": "/Users/lucia/EDA/Level3/build",
+  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fsanitize=address -std=gnu++11 -o CMakeFiles/main_test.dir/CSVData.cpp.o -c /Users/lucia/EDA/Level3/CSVData.cpp",
+  "file": "/Users/lucia/EDA/Level3/CSVData.cpp"
+},
+{
+  "directory": "/Users/lucia/EDA/Level3/build",
+  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fsanitize=address -std=gnu++11 -o CMakeFiles/main_test.dir/Text.cpp.o -c /Users/lucia/EDA/Level3/Text.cpp",
+  "file": "/Users/lucia/EDA/Level3/Text.cpp"
+},
+{
+  "directory": "/Users/lucia/EDA/Level3/build",
+  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fsanitize=address -std=gnu++11 -o CMakeFiles/main_test.dir/Lequel.cpp.o -c /Users/lucia/EDA/Level3/Lequel.cpp",
+  "file": "/Users/lucia/EDA/Level3/Lequel.cpp"
+},
+{
+  "directory": "/Users/lucia/EDA/Level3/build",
+  "command": "/usr/bin/clang++   -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.6 -fsanitize=address -std=gnu++11 -o CMakeFiles/main_test.dir/Language.cpp.o -c /Users/lucia/EDA/Level3/Language.cpp",
+  "file": "/Users/lucia/EDA/Level3/Language.cpp"
+}
+]
