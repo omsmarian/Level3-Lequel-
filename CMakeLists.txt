@@ -18,7 +18,11 @@ endif()
 add_executable(main main.cpp CSVData.cpp Text.cpp Lequel.cpp Language.cpp)
 
 # Copy resources folder to build folder
+if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+file(COPY ${CMAKE_SOURCE_DIR}/resources DESTINATION ${CMAKE_BINARY_DIR})
+elseif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 file(COPY ${CMAKE_SOURCE_DIR}/resources DESTINATION ${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE_INIT})
+endif()
 
 # Raylib
 find_package(raylib CONFIG REQUIRED)
