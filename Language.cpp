@@ -20,8 +20,7 @@ void buildLanguageProfile(const std::string languageCode, const std::string lang
 		writeCSV("resources/languagecode_names_es.csv", laguangeCode_name);
 	}
 
-	getTextFromFile("resources/corpus/Catalan.txt", text);				//aca esta el error devuelve vacio
-	//getText("MIAU GRR", text);										// con getText anda
+	getTextFromFile("resources/corpus/" + languageName + ".txt", text);				
 
 	corpus = buildTrigramProfile(text);
 	std::vector<std::string> trigramAndFrecuency(2,"");
