@@ -28,7 +28,7 @@ using namespace std;
 TrigramProfile buildTrigramProfile(const Text& text)
 {
 	wstring_convert<std::codecvt_utf8_utf16<wchar_t> > converter;
-	TrigramProfile m;
+	TrigramProfile profile;
 	for (auto i : text)
 	{
 		wstring unicodeString = converter.from_bytes(i);                    // converts UTF-8 string to wstring
@@ -38,13 +38,12 @@ TrigramProfile buildTrigramProfile(const Text& text)
 			{
 				wstring unicodeTrigram = unicodeString.substr(j, 3);
 				string trigram = converter.to_bytes(unicodeTrigram);            // convert wstring to UTF-8 string
-
-				m[trigram] += 1;
+				profile[trigram] += 1;
 			}
 		}
 	}
 
-	return m;
+	return profile;
 }
 
 /*
@@ -93,16 +92,16 @@ float getCosineSimilarity(TrigramProfile& textProfile, TrigramProfile& languageP
  */
 string identifyLanguage(const Text& text, Languages& languages)
 {
-	float valor = 0;
+	float value = 0;
 	string languajeCode;
 	auto triagram = buildTrigramProfile(text);
 	normalizeTrigramProfile(triagram);
 
 	for (auto idioma : languages)
 	{
-		if (valor < getCosineSimilarity(triagram, idioma.trigramProfile))
+		if (value < getCosineSimilarity(triagram, idioma.trigramProfile))
 		{
-			valor = getCosineSimilarity(triagram, idioma.trigramProfile);
+			value = getCosineSimilarity(triagram, idioma.trigramProfile);
 			languajeCode = idioma.languageCode;
 		}
 	}
@@ -110,3 +109,5 @@ string identifyLanguage(const Text& text, Languages& languages)
 
 	return languajeCode;
 }
+
+

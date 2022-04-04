@@ -15,7 +15,7 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     add_link_options(-fsanitize=undefined)
 endif()
 
-add_executable(main main.cpp CSVData.cpp Text.cpp Lequel.cpp)
+add_executable(main main.cpp CSVData.cpp Text.cpp Lequel.cpp Language.cpp)
 
 # Copy resources folder to build folder
 file(COPY ${CMAKE_SOURCE_DIR}/resources DESTINATION ${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE_INIT})
@@ -25,10 +25,14 @@ find_package(raylib CONFIG REQUIRED)
 if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
     target_include_directories(main PRIVATE ${RAYLIB_INCLUDE_DIRS})
     target_link_libraries(main PRIVATE ${RAYLIB_LIBRARIES})
-elseif (${CMAKE_SYSTEM_NAME} MATCHES "Darwin" || "Linux")
+elseif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+    target_include_directories(main PRIVATE ${raylib_INCLUDE_DIRS})
+    target_link_libraries(main PRIVATE ${raylib_LIBRARIES})
+elseif (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     target_include_directories(main PRIVATE ${raylib_INCLUDE_DIRS})
     target_link_libraries(main PRIVATE ${raylib_LIBRARIES})
 endif()
+
 if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     # From "Working with CMake" documentation:
     target_link_libraries(main PRIVATE "-framework IOKit" "-framework Cocoa" "-framework OpenGL")
@@ -39,6 +43,6 @@ endif()
 # Test
 enable_testing()
 
-add_executable(main_test main_test.cpp CSVData.cpp Text.cpp Lequel.cpp)
+add_executable(main_test main_test.cpp CSVData.cpp Text.cpp Lequel.cpp Language.cpp)
 
 add_test(NAME test1 COMMAND main_test)

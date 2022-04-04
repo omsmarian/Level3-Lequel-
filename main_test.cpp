@@ -11,6 +11,7 @@
 
 #include "Lequel.h"
 #include "Text.h"
+#include "Language.h"
 
 using namespace std;
 
@@ -194,6 +195,11 @@ int main()
 	if (identifyLanguage(text, languages) != "L3")
 		return fail();
 	pass();
+
+	string languageCode = "cat";
+	string languageName = "Catalan";
+
+	buildLanguageProfile(languageCode,languageName);
 
 	return 0;
 }
