@@ -1,7 +1,15 @@
 /*
- * Reads and writes CSV files
+ * Reads and writes CSV files (comma separated values)
  *
  * Copyright (C) 2022 Marc S. Ressl
+ * 
+ * 22.08 EDA
+ *
+ * Grupo 10
+ * Participants: Lucia Ruiz, Mariano Oms
+ *
+ * Level 3
+ * 
  */
 
 #ifndef _CSVDATA_H

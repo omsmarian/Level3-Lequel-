@@ -2,7 +2,14 @@
  * Lequel?
  *
  * Copyright (C) 2022 Marc S. Ressl
+ * 
+ * 22.08 EDA
  *
+ * Grupo 10
+ * Participants: Lucia Ruiz, Mariano Oms
+ *
+ * Level 3
+ * 
  * Tests
  */
 
@@ -195,11 +202,6 @@ int main()
 	if (identifyLanguage(text, languages) != "L3")
 		return fail();
 	pass();
-
-	string languageCode = "cat";
-	string languageName = "Catalan";
-
-	buildLanguageProfile(languageCode,languageName);
 
 	return 0;
 }

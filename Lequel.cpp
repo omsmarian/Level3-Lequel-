@@ -1,8 +1,15 @@
 /*
- * Lequel?
+ * Lequel
  *
  * Copyright (C) 2022 Marc S. Ressl
  *
+ * 22.08 EDA
+ *
+ * Grupo 10
+ * Participants: Lucia Ruiz, Mariano Oms
+ *
+ * Level 3
+ * 
  * Language identification based on trigrams.
  *
  * More info: https://towardsdatascience.com/understanding-cosine-similarity-and-its-application-fd42f585296a

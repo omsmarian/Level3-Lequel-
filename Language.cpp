@@ -1,34 +1,51 @@
+/*
+ * Language
+ *
+ * 22.08 EDA
+ *
+ * Grupo 10
+ * Participants: Lucia Ruiz, Mariano Oms
+ *
+ * Level 3
+ *
+ * Adds a language
+ *
+ */
+
 #include "Language.h"
+
+/*	Builds Language Profile and the respective .csv file from selected .txt
+ *	INPUT: Language name and respective code
+ */
 
 void buildLanguageProfile(const std::string languageCode, const std::string languageName)
 {
 	bool alreadyThere = false;
-	CSVData laguangeCode_name;
-	CSVData languageTrigrams;
+	CSVData languageData;
 	TrigramProfile corpus;
 	Text text;
-	readCSV("resources/languagecode_names_es.csv", laguangeCode_name);
-	for (auto field : laguangeCode_name)
+	readCSV("resources/languagecode_names_es.csv", languageData);
+	for (auto field : languageData)
 	{
 		if (field[0] == languageCode)
 			alreadyThere = true;
 	}
 	if (!alreadyThere)
 	{
-		std::vector<std::string> languageVector = { languageCode, languageName };
-		laguangeCode_name.push_back(languageVector);
-		writeCSV("resources/languagecode_names_es.csv", laguangeCode_name);
-	}
+		std::vector<std::string> carrierVector = {languageCode, languageName};
+		languageData.push_back(carrierVector);
+		writeCSV("resources/languagecode_names_es.csv", languageData);
 
-	getTextFromFile("resources/corpus/" + languageName + ".txt", text);				
+		languageData.clear();
 
-	corpus = buildTrigramProfile(text);
-	std::vector<std::string> trigramAndFrecuency(2,"");
-	for (auto field : corpus)
-	{
-		trigramAndFrecuency[0] = field.first;
-		trigramAndFrecuency[1] = std::to_string(field.second);
-		languageTrigrams.push_back(trigramAndFrecuency);
+		getTextFromFile("resources/corpus/" + languageName + ".txt", text);
+		corpus = buildTrigramProfile(text);
+		for (auto field : corpus)
+		{
+			carrierVector[0] = field.first;
+			carrierVector[1] = std::to_string(field.second);
+			languageData.push_back(carrierVector);
+		}
+		writeCSV("resources/trigrams/" + languageCode + ".csv", languageData);
 	}
-	writeCSV("resources/trigrams/" + languageCode + ".csv", languageTrigrams);
 }

@@ -2,7 +2,14 @@
  * Lequel?
  *
  * Copyright (C) 2022 Marc S. Ressl
+ * 
+ * 22.08 EDA
  *
+ * Grupo 10
+ * Participants: Lucia Ruiz, Mariano Oms
+ *
+ * Level 3
+ * 
  * Language identification based on trigrams.
  */
 
@@ -18,9 +25,6 @@
 
 using namespace std;
 
-const string LANGUAGECODE_NAMES_FILE = "resources/languagecode_names_es.csv";
-const string TRIGRAMS_PATH = "resources/trigrams/";
-
 /*
  * Loads trigram data.
  *
@@ -30,7 +34,6 @@ const string TRIGRAMS_PATH = "resources/trigrams/";
  *
  * Returns: whether the function succeeded.
  */
-
 bool loadLanguagesData(map<string, string>& languageCodeNames, Languages& languages)
 {
 	// Reads available language codes
