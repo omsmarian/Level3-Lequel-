@@ -9,7 +9,7 @@
  * Participants: Lucia Ruiz, Mariano Oms
  *
  * Level 3
- * 
+ *
  * Language identification based on trigrams.
  *
  * More info: https://towardsdatascience.com/understanding-cosine-similarity-and-its-application-fd42f585296a
@@ -50,7 +50,6 @@ TrigramProfile buildTrigramProfile(const Text& text)
 			}
 		}
 	}
-
 	return profile;
 }
 
@@ -105,16 +104,14 @@ string identifyLanguage(const Text& text, Languages& languages)
 	auto triagram = buildTrigramProfile(text);
 	normalizeTrigramProfile(triagram);
 
-	for (auto idioma : languages)
+	for (auto language : languages)
 	{
-		if (value < getCosineSimilarity(triagram, idioma.trigramProfile))
+		if (value < getCosineSimilarity(triagram, language.trigramProfile))
 		{
-			value = getCosineSimilarity(triagram, idioma.trigramProfile);
-			languajeCode = idioma.languageCode;
+			value = getCosineSimilarity(triagram, language.trigramProfile);
+			languajeCode = language.languageCode;
 		}
 	}
-
-
 	return languajeCode;
 }
 

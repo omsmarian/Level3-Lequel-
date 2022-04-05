@@ -2,14 +2,14 @@
  * Lequel?
  *
  * Copyright (C) 2022 Marc S. Ressl
- * 
+ *
  * 22.08 EDA
  *
  * Grupo 10
  * Participants: Lucia Ruiz, Mariano Oms
  *
  * Level 3
- * 
+ *
  * Tests
  */
 

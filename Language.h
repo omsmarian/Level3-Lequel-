@@ -21,4 +21,4 @@ const std::string LANGUAGECODE_NAMES_FILE = "resources/languagecode_names_es.csv
 const std::string TRIGRAMS_PATH = "resources/trigrams/";
 
 void buildLanguageProfile(const std::string languageCode,
-						  const std::string languageName);
+	const std::string languageName);

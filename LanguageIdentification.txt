@@ -62,7 +62,8 @@ Tu respuesta: Italiano
 
 And there's a hand, my trusty fiere! and gie's a hand o' thine! And we’ll tak' a right gude-willie waught, for auld lang syne.
 
-Tu respuesta: Inglés
+Tu respuesta: Lequel dice que el texto esta en Ingles, esto es incorrecto, ya que el texto esta en escocés. El fallo se da, ya que el escoces y el ingles 
+son bastante parecidos gramaticamente, y además es un texto muy corto, por lo tanto hay poco triagramas para poder hacer la comparación coseno.
 
 12. El siguiente texto está en inglés. ¿Qué dice Lequel? ¿Qué falló?
 
@@ -75,4 +76,5 @@ WE HAD EVERYTHING BEFORE US, WE HAD NOTHING BEFORE US,
 WE WERE ALL GOING DIRECT TO HEAVEN, WE WERE ALL GOING DIRECT THE OTHER WAY
 – IN SHORT, THE PERIOD WAS SO FAR LIKE THE PRESENT PERIOD, THAT SOME OF ITS NOISIEST AUTHORITIES INSISTED ON ITS BEING RECEIVED, FOR GOOD OR FOR EVIL, IN THE SUPERLATIVE DEGREE OF COMPARISON ONLY.
 
-Tu respuesta: Lequel dice que el texto esta en Afrikaans lo cual es incorrecto, esto ocurre porque el programa es key sensitive y al ser mayuscula y utilizar la tecla shift el programa interpreta otra letra.
+Tu respuesta: Lequel dice que el texto esta en Afrikaans lo cual es incorrecto, esto ocurre porque el programa es key sensitive, 
+entonces no es lo mismo una letra mayuscula, que una minuscula

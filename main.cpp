@@ -2,14 +2,14 @@
  * Lequel?
  *
  * Copyright (C) 2022 Marc S. Ressl
- * 
+ *
  * 22.08 EDA
  *
  * Grupo 10
  * Participants: Lucia Ruiz, Mariano Oms
  *
  * Level 3
- * 
+ *
  * Language identification based on trigrams.
  */
 
@@ -86,7 +86,7 @@ int main(int, char* [])
 {
 	map<string, string> languageCodeNames;
 	Languages languages;
-	
+
 	buildLanguageProfile("cat", "Catalan");
 
 	if (!loadLanguagesData(languageCodeNames, languages))
